@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>散歩コース提案アプリ　Walker!</title>
+
+    <!-- Google mapのCSS -->    <!--マップの高さ，幅を設定 -->
+    <style>
+        #maps {
+            height: 500px;
+            width: 375px;
+            top: 30px;
+            left: 20px;
+        }
+    </style>
+    
+    <!-- Google map以外のCSS -->    <!--入力フォームの配置などを設定 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google mapを表示する為に必要なjavascript  "ここにAPIキー入力"部分にはAPIキーを入力（公開プログラムのため非表示）。 -->
+    <script src="//maps.googleapis.com/maps/api/js?key=ここにAPIキー入力&callback=initMap" async></script>
+
+</head>
+<body>
+
+    <h2>Walker!</h2>
+
+    <!-- 入力フォーム -->
+    <form style="display:inline" action="" method="POST" id="form" onsubmit="return pressenter()">
+        <div title="7字以下の半角数字，小数入力可">
+            <input id="length" type="text" style="text-align: right" maxlength="7" placeholder="距離" value=2 oninput="value = value.replace(/[^0-9.]+/i,'')"/> <!-- 距離 -->
+        </div>
+        <input id="lbtn" type="button" value="GO" onclick="initMap()"/> <!-- 入力内容提出 -->
+        <div class="radiobtn">                                          <!-- 単位 -->
+            <input id="km" type="radio" name="unit" class="mbtn" value="km" checked/>
+            <label for="km">km</label>
+            <input id="m" type="radio" name="unit" class="mbtn" value="m" />
+            <label for="m">m</label> 
+        </div>
+    </form>
+
+    <!-- google mapを表示するdiv -->
+    <div id="maps"></div>
+
+    <!-- Google Map を表示するjavascript -->
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

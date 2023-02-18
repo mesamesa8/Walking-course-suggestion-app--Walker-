@@ -1,0 +1,59 @@
+﻿@charset "UTF-8";
+
+/*フォーム全体*/
+#form {
+    position: relative;     /*フォームの相対位置*/
+    max-width: 270px;       /*フォームのサイズ*/
+    margin-bottom: 30px;    /*フォームの下に余白*/
+}
+
+/*入力ボックス*/
+#length {
+    position: absolute;     /*フォームの絶対位置*/
+    left: 20px;             /*位置調整*/
+    outline: 0;             /*クリック時の青い枠線消す*/
+    width: 70px;            /*入力ボックスの横幅*/
+    height: 50px;           /*入力ボックスの高さ*/
+    padding: 0 10px;        /*テキスト位置調整*/
+    border-radius: 2px 0 0 2px; /*入力ボックスの角を丸める*/
+    background: #ffffff;      /*入力ボックスの背景カラー*/
+    border: none;               /*入力ボックスの枠線を消す*/
+    font-weight: bold;          /*入力ボックスのテキスト太字*/
+    font-size: 16px;            /*入力ボックスのフォントサイズ*/
+}
+
+/*Goボタン*/
+#lbtn {
+    width: 80px;            /*Goボタンの横幅*/
+    height: 50px;           /*Goボタンの縦幅*/
+    position: relative;     /*Goボタンの相対位置*/
+    left: 110px;            /*Goボタンの位置調整*/
+    border-radius: 0 2px 2px 0; /*Goボタンの角を丸める*/
+    background: #7fbfff;  /*Goボタンの背景カラー*/
+    border: none;           /*Goボタンの枠線を消す*/
+    color: #ffffff;       /*Goボタンのテキストカラー*/
+    font-weight: bold;      /*Goボタンのテキスト太字*/
+    font-size: 16px;        /*Goボタンのフォントサイズ*/
+}
+
+/*単位切り替えボタン*/
+.mbtn {
+    display: none;          /*ラジオボタン非表示*/
+}
+label {
+    background-color: #7fbfff;
+    padding: 5px 10px;      /*単位切り替えボタンを詰める*/
+    width: 80px;            /*単位切り替えボタンの横幅*/
+    height: 50px;           /*単位切り替えボタンの縦幅*/
+    position: relative;     /*単位切り替えボタンの相対位置*/
+    top: 10px;
+    left: 20px;             /*単位切り替えボタンの位置調整*/
+    border-radius: 0 2px 2px 0; /*単位切り替えボタンの角を丸める*/
+    border: none;           /*単位切り替えボタンの枠線を消す*/
+    color: #fff;          /*単位切り替えボタンのテキストカラー*/
+    font-weight: bold;      /*単位切り替えボタンのテキスト太字*/
+    font-size: 16px;        /*単位切り替えボタンのフォントサイズ*/
+}
+.mbtn:checked + label {
+    background-color: pink; /*単位切り替えボタン選択時に色を変える*/
+}
